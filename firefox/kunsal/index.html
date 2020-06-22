@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kunsal Bu Nyonkyanren</title>
+	<script src='/kunsal/index.js' defer></script>
+	<style>
+		#command-line {
+			width: 20em;
+			height:5em;
+
+		}
+
+		#windowList > li {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.errorout{
+			font-family: "Courier New", Courier, monospace;
+			color: #ffffff;
+			background-color: #ff9191;
+		}
+
+		#warning{
+			color: red;
+			font-family: sans-serif;
+			text-align: center;
+		}
+
+		.enteredCommand {
+			font-family: "Courier New", Courier, monospace;
+			color: #4f4f4f;
+			background-color: #d1d1d1;
+		}
+
+		.result {
+			font-family: "Courier New", Courier, monospace;
+			color: #000000;
+			background-color: #cfcfcf;
+		}
+
+		#consoleWindow{
+			margin-right: 10em;
+			margin-left: 10em;
+		}
+
+		#command-line {
+			font-family: "Courier New", Courier, monospace;
+			margin-right: 1em;
+		}
+
+		ul{
+			list-style-type: none;
+			font-family: "Courier New", Courier, monospace;
+		}
+
+		#cmdwrapper {
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- <h1 id='warning'>WARNING: DEV CONSOLE IS DANGEROUS! USE AT YOUR OWN RISK!</h1> -->
+	<h1 id='warning'>&iexcl;Malkyan: Kunsal Bu Nyonkyanren Malkyanik Va!<br>&iexcl;Sen Ni Vi Kyansak, Sak Ni Kyana Malika Senkon!</h1>
+
+	<div id='consoleWindow'>
+		<ul id='windowList'></ul>
+	</div>
+	<div id='cmdwrapper'>
+		<!-- <input class='center' id='command-line' type="textarea" size='50'> -->
+		<textarea class='center' id='command-line'></textarea>
+		<button type='button' class='center' id='exec'>Sak</button>
+	</div>
+
+</body>
+</html>

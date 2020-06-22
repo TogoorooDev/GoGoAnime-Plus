@@ -1,0 +1,46 @@
+{
+	"manifest_version": 2,
+	"name": "GoGoAnime Plus",
+	"version": "0.3.1",
+
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+
+	"description": "Adds a watch tracker to gogoanime.io",
+
+	"icons": {
+		"16": "res/icon-16.png",
+		"32": "res/icon-32.png",
+		"48": "res/icon-48.png",
+		"128": "res/icon-128.png"
+	},
+
+	"permissions": [
+		"storage"
+	],
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "GoGoAnimePlus@nodomain.com",
+			"strict_min_version": "55.0"
+		}
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"32": "res/icon-32.png"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.gogoanime.io/category/*"],
+			"js": ["js/showPage/episodeGrid.js"]
+		},
+		{
+			"matches": ["*://*.gogoanime.io/*"],
+			"exclude_matches": ["*://*.gogoanime.io/category/*", "*://*.gogoanime.io/*.html"],
+			"all_frames": false,
+			"js": ["js/lib/chrome.js", "js/watchPage/watchPage.js", "js/watchPage/watchButton.js", "js/watchPage/episodeGrid.js"]
+		}
+	]
+}
