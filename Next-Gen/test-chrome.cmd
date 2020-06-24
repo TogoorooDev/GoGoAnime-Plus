@@ -1,0 +1,1 @@
+web-ext run -s .\Source\ -t chromium
